@@ -25,11 +25,15 @@ import Adafruit_MPR121.MPR121 as MPR121
 
 class TouchSensor(object):
 
+    DEBUG = False
+
     TOUCHED = 1
     RELEASED = -1
     UNCHANGED = 0
 
     def __init__(self):
+        if DEBUG:
+            return
         print('Initializing TouchSensor...')
         
         self.cap = MPR121.MPR121()
@@ -43,6 +47,8 @@ class TouchSensor(object):
         self.last_touched = self.cap.touched()
 
     def update(self):
+        if DEBUG:
+            return
         self.data = [0] * 12
         current_touched = self.cap.touched()
         # Check each pin's last and current state to see if it was pressed or released.
@@ -62,5 +68,7 @@ class TouchSensor(object):
         self.last_touched = current_touched
 
     def status(self, pinNum):
+        if DEBUG:
+            return
         return self.data[pinNum]
         
