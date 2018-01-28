@@ -1,6 +1,7 @@
 import sys, time
 import pygame
 from TouchSensor import TouchSensor
+from GameSprite import GameSprite
 
 from pygame.locals import *
 
