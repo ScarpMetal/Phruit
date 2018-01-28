@@ -71,4 +71,26 @@ while True:
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
+        if event.type == pygame.KEYDOWN and ts.DEBUG:
+            if event.key == K_0:
+                print("Key 0 was pressed")
+            elif event.key == K_1:
+                print("Key 1 was pressed")
+            elif event.key == K_2:
+                print("Key 2 was pressed")
+            elif event.key == K_3:
+                print("Key 3 was pressed")
+            elif event.key == K_4:
+                print("Key 4 was pressed")
+            elif event.key == K_5:
+                print("Key 5 was pressed")
+            elif event.key == K_6:
+                print("Key 6 was pressed")
+            elif event.key == K_7:
+                print("Key 7 was pressed")
+            elif event.key == K_8:
+                print("Key 8 was pressed")
+            elif event.key == K_9:
+                print("Key 9 was pressed")
+            
     time.sleep(0.1)
